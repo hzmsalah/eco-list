@@ -1,0 +1,360 @@
+/*Background and font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #E5EFC1;
+    margin: 0;
+}
+
+/*Navigation bar*/
+.topnav {
+    background-color: #141D16;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navbar__alligator-icon {
+    width: 46px;
+    filter: invert(92%) sepia(16%) saturate(628%) hue-rotate(67deg) brightness(90%) contrast(84%);
+}
+
+.dropdown-context__text {
+    display: inline;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Page components*/
+
+/*Main halves of the page*/
+.column-side {
+    float:left;
+    padding:10px;
+    width:25%;
+}
+
+.column-main {
+    float:left;
+    padding:10px;
+    width:75%;
+}
+/*Rows, will be also used for the news cards*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    background-color: #F9FBF0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+
+
+/*The halves of a news card*/
+.image {
+    width: 30%;
+    float:left;
+    padding-right: 10px;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.description {
+    width: 60%;
+    float:left;
+}
+
+.card:hover {
+    background-color: #557B83;
+    color: #F9FBF0;
+}
+a {
+    color: black;
+}
+.card
+{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/*Responsive/Media Queries*/
+@media screen and (max-width: 800px) {
+    /*Hides all the navbar links for smaller screens*/
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    /*Expand all cards*/
+    .left, .column-side, .art-pic, .art-i{
+        width: 100%;
+        padding: 0;
+    }
+    /*Responsive navbar-class*/
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive {float: none;}
+    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+/******************************************* CARDs *****************************************/
+
+.container
+{
+    width: 98vw;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 2fr 2fr 1.5fr;
+    grid-template-rows: 0.25fr 1fr 1fr 0.5fr;
+
+    gap: 10px;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container div
+{
+    padding: 10px;
+    border-radius: 5px;
+}
+.eco
+{
+    text-align: center;
+}
+
+.art1
+{
+    background-color: #F9FBF0;
+    border-radius: 5px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.art2
+{
+    background-color: #F9FBF0;
+    border-radius: 5px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.images
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.info
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.t-cats
+{
+    background-color: #F9FBF0;
+    border-radius: 5px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.rec
+{
+    background-color: #F9FBF0;
+    border-radius: 5px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.footer {
+    text-align: center;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+}
+
+img
+{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.art1:hover
+{
+    background-color: #557B83;
+    color: #F9FBF0;
+}
+.art2:hover
+{
+    background-color: #557B83;
+    color: #F9FBF0;
+}
+
+@media screen and (max-width: 767px)
+{
+
+ .container
+ {
+     width: 95vw;
+     height: 100vh;
+
+     display: grid;
+
+     grid-template-rows: 0.5fr 2fr 2fr 1fr 1fr 0.25fr;
+     grid-template-columns: 1fr;
+ }
+    .container div
+    {
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .eco
+    {
+        text-align: center;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        position: sticky;
+    }
+    .art1
+    {
+        background-color: #F9FBF0;
+        border-radius: 5px;
+        grid-row-start: 3;
+        grid-row-end: 65;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .art2
+    {
+        background-color: #F9FBF0;
+        border-radius: 5px;
+        grid-row-start: 66;
+        grid-row-end: 128;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .t-cats
+    {
+        background-color: #F9FBF0;
+        border-radius: 5px;
+        grid-row-start: 129;
+        grid-row-end: 140;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .rec
+    {
+        background-color: #F9FBF0;
+        border-radius: 5px;
+        grid-row-start: 141;
+        grid-row-end: 160;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .footer {
+        text-align: center;
+        grid-row-start: 161;
+        grid-row-end: 170;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+}
